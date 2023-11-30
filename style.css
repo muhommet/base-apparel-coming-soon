@@ -1,0 +1,187 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hero-desktop {
+  display: none;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  max-width: 484px;
+  min-width: 442px;
+  height: 820px;
+  background-color: hsla(0, 56%, 94%, 0.334);
+}
+#hero-mobile {
+  width: 100%;
+}
+#logo {
+  width: 125px;
+  height: 26px;
+  margin: 35px 35px;
+  align-self: flex-start;
+}
+#logo2 {
+  display: none;
+}
+.text-content {
+  position: relative;
+}
+h1 {
+  margin-top: 60px;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 10px;
+  line-height: 55px;
+  color: hsl(0, 36%, 70%);
+}
+#coming-soon {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 10px;
+  color: hsl(0, 6%, 24%);
+}
+p {
+  margin: 20px 35px;
+  text-align: center;
+  line-height: 25px;
+  color: hsl(0, 36%, 70%);
+}
+.email-container {
+  color: hsl(0, 36%, 70%);
+  display: flex;
+  margin-top: 40px;
+}
+.email {
+  all: unset;
+  height: 50px;
+  width: 80%;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  white-space: nowrap;
+  margin-left: 70px;
+}
+
+#send-button {
+  all: unset;
+  height: 54px;
+  width: 95px;
+  border-radius: 30px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.15);
+  right: 68px;
+}
+.error {
+  border: 2px solid hsl(0, 93%, 68%);
+}
+#error-text {
+  color: hsl(0, 93%, 68%);
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0%;
+  text-align: inherit;
+  margin-left: 90px;
+  margin-bottom: 70px;
+  display: none;
+}
+.email-container::after {
+  content: url(./images/icon-error.svg);
+  display: none;
+  position: absolute;
+  left: 61%;
+  bottom: 20.5%;
+}
+.email-container.show::after {
+  display: block;
+}
+#pattern {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  body {
+    background-color: hsla(0, 56%, 94%, 0.334);
+  }
+  .project {
+    position: relative;
+    flex-direction: row-reverse;
+    /* min-width: 850px;
+    max-width: auto; */
+    min-width: 1536px;
+    max-width: auto;
+    height: 739px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0px 0px 0px 200px;
+  }
+  #hero-mobile {
+    display: none;
+  }
+  #hero-desktop {
+    display: block;
+    width: 110%;
+    height: 100%;
+    z-index: 1;
+    margin-left: 250px;
+  }
+  #logo {
+    display: none;
+    z-index: 1;
+  }
+  #logo2 {
+    display: block;
+    position: absolute;
+    left: 200px;
+    margin-top: 55px;
+  }
+  #pattern {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+  }
+  #coming-soon,
+  h1 {
+    font-size: 4rem;
+    line-height: 75px;
+    text-align: start;
+    margin-left: 0;
+    margin-top: 200px;
+  }
+  p {
+    text-align: start;
+    margin-left: 0;
+  }
+  .email {
+    margin-left: 0;
+  }
+  #error-text {
+    margin-left: 22px;
+  }
+  .email-container::after {
+    content: url(./images/icon-error.svg);
+    display: none;
+    position: absolute;
+    left: 61%;
+    bottom: 18%;
+  }
+}
